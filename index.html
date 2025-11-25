@@ -1,127 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Rudra Chhetri - Data Analyst Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #f3f4f6;
-    color: #111827;
-    scroll-behavior: smooth;
-  }
-  header {
-    background: linear-gradient(135deg, #111827, #1f2937);
-    color: #f9fafb;
-    padding: 40px 16px 50px;
-    text-align: center;
-  }
-  header h1 { font-size: 36px; margin-bottom: 8px; }
-  header h2 { font-size: 20px; font-weight: 400; color: #9ca3af; margin-bottom: 14px; }
-  header p { max-width: 600px; margin: auto; font-size: 15px; color: #e5e7eb; line-height: 1.6; }
-  .header-links a {
-    display: inline-block;
-    margin: 6px 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 999px;
-    text-decoration: none;
-    border: 1px solid #4b5563;
-    color: #e5e7eb;
-    transition: all 0.3s ease;
-  }
-  .header-links a.primary {
-    background: #2563eb;
-    border-color: #2563eb;
-    color: #f9fafb;
-  }
-  .header-links a:hover { transform: scale(1.05); }
+/* ---- Global ---- */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f1c2e;
+  color: #e0e7ff;
+  scroll-behavior: smooth;
+}
+a { text-decoration:none; color:inherit; }
 
-  .container { max-width: 980px; margin: -24px auto 40px; padding: 0 12px; }
+/* ---- Header ---- */
+header {
+  background: linear-gradient(135deg,#0f3460,#533483);
+  text-align: center;
+  padding: 80px 20px 100px;
+  position: relative;
+}
+header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg,#f97316,#facc15,#3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+header h2 {
+  font-size: 22px;
+  color:#d1d5db;
+  margin:10px 0 20px;
+}
+header p {
+  max-width: 750px;
+  margin:auto;
+  font-size:16px;
+  color:#cbd5e1;
+  line-height:1.8;
+}
+.header-links {
+  margin-top:25px;
+}
+.header-links a {
+  display:inline-block;
+  margin:8px 12px;
+  padding:12px 28px;
+  font-size:16px;
+  border-radius:999px;
+  border:2px solid rgba(255,255,255,0.3);
+  transition: all 0.3s;
+  font-weight:500;
+}
+.header-links a.primary {
+  background: linear-gradient(90deg,#f97316,#facc15,#3b82f6);
+  border:none;
+  color:#0f1c2e;
+}
+.header-links a:hover {
+  transform: scale(1.08);
+  box-shadow:0 6px 20px rgba(255,255,255,0.2);
+}
 
-  .card {
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(15,23,42,0.08);
-    padding: 24px 22px 28px;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(15,23,42,0.15); }
+/* ---- Container ---- */
+.container {
+  max-width:1100px;
+  margin:-50px auto 60px;
+  padding:0 16px;
+}
 
-  h3.section-title {
-    font-size: 19px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 6px;
-  }
-  .tagline { font-size: 14px; color: #4b5563; margin-top: 4px; line-height: 1.5; }
+/* ---- Card ---- */
+.card {
+  background:#14213d;
+  border-radius:22px;
+  padding:36px 32px;
+  margin-bottom:30px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.8);
+}
+h3.section-title {
+  font-size:24px;
+  margin-bottom:18px;
+  border-bottom:3px solid #f97316;
+  padding-bottom:8px;
+  color:#facc15;
+}
+.tagline {
+  font-size:15px;
+  color:#d1d5db;
+  margin-top:10px;
+  line-height:1.8;
+}
 
-  .two-column { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; }
-  @media(max-width:768px){ .two-column { grid-template-columns: 1fr; } }
+/* ---- Two Column ---- */
+.two-column {
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:24px;
+}
+@media(max-width:768px){ .two-column { grid-template-columns:1fr; } }
 
-  .skills-list span {
-    display: inline-block;
-    margin: 4px 6px 6px 0;
-    padding: 5px 12px;
-    font-size: 12px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
-    color: #fff;
-    transition: transform 0.3s;
-  }
-  .skills-list span:hover { transform: scale(1.1); }
+/* ---- Skills ---- */
+.skills-group { margin-top:14px; }
+.skills-group h4 { font-size:18px; margin-bottom:10px; color:#3b82f6; }
+.skills-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.skills-list .skill {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 18px;
+  font-weight:500;
+  font-size:14px;
+  border-radius:999px;
+  background: linear-gradient(135deg,#3b82f6,#9333ea,#f97316,#facc15);
+  color:#0f1c2e;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skills-list .skill i { font-size:16px; }
+.skills-list .skill:hover { transform:scale(1.1); box-shadow:0 4px 20px rgba(0,0,0,0.5); }
 
-  .project {
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    padding: 16px 16px 18px;
-    margin-top: 16px;
-    background: #f9fafb;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .project:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
-  .project h4 { font-size: 17px; margin-bottom: 5px; }
-  .project-tools .pill {
-    display: inline-block;
-    margin: 2px 4px 2px 0;
-    padding: 4px 9px;
-    font-size: 11px;
-    border-radius: 999px;
-    background: linear-gradient(90deg,#2563eb,#3b82f6);
-    color: #fff;
-  }
-  ul { margin: 6px 0 4px 20px; font-size: 13px; color: #374151; }
-  .links a {
-    display: inline-block;
-    margin-right: 12px;
-    margin-top: 6px;
-    font-size: 13px;
-    text-decoration: none;
-    color: #2563eb;
-    transition: color 0.3s;
-  }
-  .links a:hover { color: #1e40af; }
+/* ---- Projects ---- */
+.project {
+  border-radius:18px;
+  border:1px solid #2c2c2c;
+  padding:24px 22px 28px;
+  margin-top:24px;
+  background:#1b263b;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project:hover {
+  transform:translateY(-5px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.7);
+}
+.project h4 { font-size:22px; margin-bottom:10px; color:#f97316; }
+.project .tools { margin-bottom:12px; }
+.project .tools .pill {
+  display:inline-block;
+  margin:2px 6px 2px 0;
+  padding:6px 14px;
+  font-size:13px;
+  border-radius:999px;
+  background: linear-gradient(90deg,#facc15,#f97316,#3b82f6);
+  color:#0f1c2e;
+  font-weight:500;
+}
+.project ul { margin:12px 0 10px 24px; font-size:14px; color:#cbd5e1; }
+.links a {
+  display:inline-block;
+  margin-right:16px;
+  margin-top:10px;
+  font-size:15px;
+  font-weight:500;
+  text-decoration:none;
+  color:#3b82f6;
+  transition: all 0.3s;
+}
+.links a:hover { color:#facc15; }
 
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: #6b7280;
-    padding: 16px 0 22px;
-  }
+/* ---- Contact ---- */
+#contact .tagline a { color:#3b82f6; font-weight:500; }
+#contact .tagline a:hover { color:#facc15; }
+
+/* ---- Footer ---- */
+footer {
+  text-align:center;
+  font-size:14px;
+  color:#9ca3af;
+  padding:28px 0 36px;
+  background:#0f1c2e;
+  border-top:1px solid #2c2c2c;
+}
+
+/* ---- Creative Animations ---- */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.project:hover h4 {
+  animation: float 1s ease infinite;
+}
 </style>
 </head>
 <body>
 
 <header>
   <h1>Rudra Chhetri</h1>
-  <h2>Aspiring Data Analyst</h2>
+  <h2>Aspiring Data Analyst & Business Insights Enthusiast</h2>
   <p>
-    I work with SQL, Python, Power BI, DAX, and Power Query to clean data, analyze business problems,
-    and build dashboards for decision-making. This portfolio highlights my work in churn analysis and sales analytics.
+    I transform complex data into actionable insights that drive business decisions.  
+    With hands-on experience in SQL, Python, Excel, and Power BI, I clean, analyze, and visualize data to uncover patterns, trends, and opportunities.  
+    My portfolio showcases professional-level projects in telecom churn analysis, employee attrition, and sales performance dashboards.
   </p>
   <div class="header-links">
     <a href="#projects" class="primary">View My Projects</a>
@@ -130,105 +211,157 @@
 </header>
 
 <div class="container">
-  <!-- About + Skills -->
+  <!-- ABOUT + SKILLS -->
   <div class="card">
     <div class="two-column">
       <div>
         <h3 class="section-title">About Me</h3>
         <p class="tagline">
-          I’m a fresher data analyst building hands-on projects in churn analysis, HR analytics, and sales performance.
-          I focus on writing clear SQL, performing analysis in Python, and building interactive Power BI dashboards that highlight real business insights.
-        </p>
-        <p class="tagline">
-          My goal is to work in a Data Analyst / BI Analyst role where I can help companies understand their customers, performance, and patterns through data.
+            I’m a fresher Data Analyst passionate about turning raw data into clear, actionable insights that businesses can trust.  
+            I focus on writing optimized SQL queries, performing thorough analysis in Python, and building interactive dashboards in Power BI that communicate results effectively.  
+            I thrive on solving real-world business problems using data and love exploring new tools and techniques to improve efficiency and accuracy.
         </p>
       </div>
       <div>
         <h3 class="section-title">Skills</h3>
-        <div class="skills-list">
-          <span>SQL</span>
-          <span>Python</span>
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>Excel</span>
-          <span>Churn Analysis</span>
-          <span>Sales Analysis</span>
-          <span>Data Cleaning</span>
+        <div class="skills-group">
+          <h4>Data & Analysis</h4>
+          <div class="skills-list">
+            <div class="skill"><i class="fas fa-database"></i>SQL (joins, aggregations, Windows Function, CTEs , cleaning)</div>
+            <div class="skill"><i class="fab fa-python"></i>Python (Pandas, EDA, Numpy, Matplotlib)</div>
+            <div class="skill"><i class="fas fa-file-excel"></i>Excel (pivot tables, lookup, basic formulas)</div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h4>BI & Visualization</h4>
+          <div class="skills-list">
+            <div class="skill"><i class="fas fa-chart-line"></i>Power BI (DAX, dashboards, Power query, Tooltip)</div>
+            <div class="skill"><i class="fas fa-chart-pie"></i>KPI Cards & Charts</div>
+            <div class="skill"><i class="fas fa-mouse-pointer"></i>Interactive Drilldowns</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
   <div class="card" id="projects">
     <h3 class="section-title">Projects</h3>
 
+    <!-- Telecom Churn -->
     <div class="project">
       <h4>Telecom Customer Churn Analysis</h4>
-      <div class="project-tools">
+      <div class="tools">
         <span class="pill">SQL</span>
         <span class="pill">Python</span>
-        <span class="pill">Chi-square Test</span>
-        <span class="pill">Power BI</span>
+        <span class="pill">Power BI(Power Query, DAX)</span>
       </div>
-      <p class="tagline">
-        Analyzed ~7K telecom customers to understand why customers are leaving and how churn impacts revenue.
-      </p>
-      <ul>
-        <li>Overall churn rate: <b>27%</b>.</li>
-        <li>0–1 month tenure customers have the highest churn at <b>62%</b>.</li>
-        <li>Fiber Optic & month-to-month contracts are riskiest segments.</li>
-      </ul>
+      <img src="churn dashboard.png" alt="Telecom Dashboard Screenshot" style="width:100%; border-radius:12px; margin:12px 0; box-shadow:0 6px 20px rgba(0,0,0,0.15);" />
+      
+        <!-- Project Description -->
+        <p class="tagline">
+          Analyzed telecom customer data to understand why customers leave and which segments are most at risk.  
+          The project focuses on identifying patterns and insights that help improve customer retention.
+        </p>
+      
+        <!-- Tools Used -->
+        <p><b>Tools Used:</b> SQL ( aggregations, CASE statements, Data Cleaning), Python (Pandas, Numpy, Matplotlib, chi square test, analysis), Power BI (Power Query, DAX, interactive dashboards, KPI cards, slicers, charts)</p>
+      
+        <!-- Process -->
+        <p><b>Process:</b> Collected and cleaned ~7,000 customer records. Categorized tenure buckets and contract types, analyzed internet and service usage. Aggregated data using SQL and Python, then built interactive dashboards in Power BI for dynamic exploration.</p>
+      
+        <!-- Insights -->
+        <p><b>Insights:</b> 
+          <ul>
+            <li>Overall churn rate: 27%, meaning 1 in 4 customers leave.</li>
+            <li>0–1 month tenure customers have the highest churn (62%), indicating onboarding issues.</li>
+            <li>Senior citizens (60+) churned more than younger customers (35% vs 22%).</li>
+            <li>Month-to-month Fiber Optic contracts are the riskiest segments.</li>
+            <li>These insights help design strategies for retention, onboarding, and personalized offers.</li>
+          </ul>
+        </p>
+      
       <div class="links">
-        <a href="https://github.com/r-chhetri12/customer-churn-analysis-dashboard">GitHub</a>
-        <a href="https://github.com/r-chhetri12/customer-churn-analysis-dashboard/blob/main/churn%20analysis.pbix">Dashboard</a>
+        <a href="https://github.com/r-chhetri12/customer-churn-analysis-dashboard">View GitHub</a>
+        <a href="https://github.com/r-chhetri12/customer-churn-analysis-dashboard/blob/main/churn%20analysis.pbix">View Dashboard</a>
       </div>
     </div>
 
+    <!-- HR / Attrition -->
     <div class="project">
       <h4>HR / Employee Attrition Analysis</h4>
-      <div class="project-tools">
+      <div class="tools">
         <span class="pill">SQL</span>
-        <span class="pill">Python</span>
-        <span class="pill">Power BI</span>
+      
+        <span class="pill">Power BI(Power Query, DAX)</span>
       </div>
+      <img src="Hr_dashboard.png" alt="HR Dashboard Screenshot" style="width:100%; border-radius:12px; margin:12px 0; box-shadow:0 6px 20px rgba(0,0,0,0.15);" />
+
       <p class="tagline">
-        Explored employee data to understand attrition patterns and highlight departments and roles with the most exits.
+        Explored employee data to understand attrition patterns, identify high-risk groups, and highlight departments and roles with the most exits.
       </p>
-      <ul>
-        <li>Overall attrition rate around <b>50%</b>.</li>
-        <li>Highest attrition in the first year, dropping by year 5.</li>
-      </ul>
+    
+      <p><b>Tools Used:</b> SQL (data aggregation, filtering, analysis), Power BI (interactive dashboards, charts, slicers, Power Query(Data Cleaning), DAX)</p>
+    
+      <p><b>Process:</b> Collected employee datasets, created age, tenure, and department buckets. Analyzed attrition trends using SQL and Python. Built interactive dashboards in Power BI to track attrition by department, role, age, tenure, and gender.</p>
+    
+      <p><b>Insights:</b>
+        <ul>
+          <li>Overall attrition rate: ~50%+, meaning over half of employees left the company.</li>
+          <li>Highest attrition in the first year, gradually dropping by year 5, indicating onboarding and early engagement issues.</li>
+          <li>Production department and roles like Laborer, Technician, Engineer, and Foreman had the highest exits.</li>
+          <li>Older employees (46+) and high performers showed higher attrition, signaling potential career progression problems.</li>
+          <li>Insights can help HR design better retention strategies, improve onboarding, and reduce turnover.</li>
+        </ul>
+      </p>
+    
       <div class="links">
-        <a href="https://github.com/r-chhetri12/employee-attrition-sql-analysis-dashboard">GitHub</a>
-        <a href="https://github.com/r-chhetri12/employee-attrition-sql-analysis-dashboard/blob/main/HR_Report.pbix">Dashboard</a>
+        <a href="https://github.com/r-chhetri12/employee-attrition-sql-analysis-dashboard">View GitHub</a>
+        <a href="https://github.com/r-chhetri12/employee-attrition-sql-analysis-dashboard/blob/main/HR_Report.pbix">View Dashboard</a>
       </div>
     </div>
-
+   
+    <!-- Sales Dashboard -->
     <div class="project">
       <h4>Sales Performance Dashboard</h4>
-      <div class="project-tools">
-        <span class="pill">Power Query</span>
+      <div class="tools">
+        
         <span class="pill">SQL</span>
-        <span class="pill">DAX</span>
-        <span class="pill">Power BI</span>
+      
+        <span class="pill">Power BI(Power Query, DAX)</span>
       </div>
-      <p class="tagline">
-        Built an end-to-end sales performance dashboard with dynamic measures to analyze sales, profit, cost, shipments and boxes across regions and products.
-      </p>
+      <img src="sales_dashboard.png" alt="Sales Dashboard Screenshot" style="width:100%; border-radius:12px; margin:12px 0; box-shadow:0 6px 20px rgba(0,0,0,0.15);" />
+
+  <p class="tagline">
+    Built a dynamic sales performance dashboard to analyze sales, profit, cost, shipments, and boxes across regions, categories, and products.
+  </p>
+
+  <p><b>Tools Used:</b>  SQL (aggregations, joins, analysis), DAX (dynamic measures, KPIs), Power BI (interactive dashboards, drilldowns, time-series charts)</p>
+
+  <p><b>Process:</b> Collected and cleaned sales data, categorized by product, region, and month. Built dynamic DAX measures to calculate sales, profit, and cost. Designed interactive visuals, KPI cards, and slicers in Power BI for easy exploration and reporting.</p>
+
+  <p><b>Insights:</b>
+    <ul>
+      <li>Total sales: $34M, total profit: $21M (profit margin 60.29%), total cost: $14M, shipments: 6k, total boxes: 2M.</li>
+      <li>Top region: New Zealand with $6M sales and $4M profit.</li>
+      <li>Best category: Bars ($17M sales, $10M profit).</li>
+      <li>Top product: Peanut Butter Cubes (66.71% profit margin).</li>
+      <li>Insights help management track sales performance, profitability, and identify trends for strategic decisions.</li>
+    </ul>
+  </p>
       <div class="links">
-        <a href="https://github.com/r-chhetri12/sales-analysis-dashboard">GitHub</a>
-        <a href="https://github.com/r-chhetri12/sales-analysis-dashboard/blob/main/Sales_report_1.pbix">Dashboard</a>
+        <a href="https://github.com/r-chhetri12/sales-analysis-dashboard">View GitHub</a>
+        <a href="https://github.com/r-chhetri12/sales-analysis-dashboard/blob/main/Sales_report_1.pbix">View Dashboard</a>
       </div>
     </div>
+
   </div>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <div class="card" id="contact">
     <h3 class="section-title">Contact</h3>
     <p class="tagline">
-      I’m open to opportunities as a Data Analyst / BI Analyst.  
-      Feel free to reach out to discuss my projects or potential roles.
+      Open to opportunities as a Data Analyst / BI Analyst. Let’s discuss my projects or potential roles.
     </p>
     <p class="tagline">
       <b>Email:</b> chhetrirudra70@gmail.com<br>
@@ -236,10 +369,12 @@
       <b>GitHub:</b> <a href="https://github.com/r-chhetri12" target="_blank">View Repositories</a>
     </p>
   </div>
-</div>
+ 
 
 <footer>
   © 2025 · Portfolio of Rudra Chhetri
 </footer>
+
 </body>
+
 </html>

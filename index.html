@@ -5,60 +5,92 @@
   <title>Rudra Chhetri - Data Analyst Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
+      background: #f3f4f6;
+      color: #111827;
     }
     header {
-      background: #111827;
+      background: linear-gradient(135deg, #111827, #1f2937);
       color: #f9fafb;
-      padding: 30px 20px;
+      padding: 32px 16px 40px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 32px;
+    }
+    header h2 {
+      margin: 8px 0 4px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #9ca3af;
     }
     header p {
-      margin: 8px 0 0;
+      margin: 10px auto 14px;
+      max-width: 540px;
       font-size: 14px;
-      opacity: 0.9;
+      color: #e5e7eb;
+    }
+    .header-links a {
+      display: inline-block;
+      margin: 4px 8px;
+      padding: 6px 14px;
+      font-size: 13px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid #4b5563;
+      color: #e5e7eb;
+    }
+    .header-links a.primary {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #f9fafb;
     }
     .container {
-      max-width: 900px;
-      margin: 20px auto;
-      background: #ffffff;
-      padding: 20px 25px 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      max-width: 980px;
+      margin: -24px auto 40px;
+      padding: 0 12px;
     }
-    h2 {
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+      padding: 20px 20px 26px;
+      margin-bottom: 18px;
+    }
+    h3.section-title {
+      margin: 0 0 10px;
+      font-size: 18px;
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 6px;
-      margin-top: 25px;
-      font-size: 20px;
-    }
-    .project {
-      margin-top: 18px;
-      padding: 15px;
-      border-radius: 8px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-    }
-    .project h3 {
-      margin: 0 0 5px;
-      font-size: 18px;
     }
     .tagline {
-      font-size: 14px;
+      font-size: 13px;
       color: #4b5563;
-      margin-top: 5px;
+      margin-top: 3px;
+    }
+    .project {
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      padding: 14px 14px 16px;
+      margin-top: 14px;
+      background: #f9fafb;
+    }
+    .project h4 {
+      margin: 0 0 3px;
+      font-size: 16px;
+    }
+    .project-tools {
+      margin: 4px 0 6px;
     }
     .pill {
       display: inline-block;
-      margin: 3px 4px 0 0;
+      margin: 2px 4px 0 0;
       padding: 3px 8px;
       font-size: 11px;
       border-radius: 999px;
@@ -66,13 +98,15 @@
       color: #374151;
     }
     ul {
+      margin: 6px 0 4px;
       padding-left: 18px;
-      margin-top: 6px;
+      font-size: 13px;
+      color: #374151;
     }
     .links a {
       display: inline-block;
       margin-right: 10px;
-      margin-top: 8px;
+      margin-top: 6px;
       font-size: 12px;
       text-decoration: none;
       color: #2563eb;
@@ -86,107 +120,181 @@
       background: #eef2ff;
       color: #1f2937;
     }
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
     footer {
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       color: #6b7280;
-      margin: 20px 0 30px;
+      padding: 12px 0 20px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Rudra Chhetri</h1>
-    <p>Data Analyst • SQL | Python | Power BI | DAX | Excel</p>
+    <h2>Aspiring Data Analyst</h2>
+    <p>
+      I work with SQL, Python, Power BI, DAX and Power Query to clean data, analyze business problems,
+      and build dashboards for decision-making. This portfolio highlights my work in churn analysis and sales analytics.
+    </p>
+    <div class="header-links">
+      <a href="#projects" class="primary">View My Projects</a>
+      <a href="#contact">Contact</a>
+      <!-- Replace with your actual resume link if you upload one -->
+      <!-- <a href="YOUR_RESUME_LINK" target="_blank">Download Resume</a> -->
+    </div>
   </header>
 
   <div class="container">
-    <h2>About Me</h2>
-    <p class="tagline">
-      I’m an aspiring data analyst with hands-on projects in churn analysis, sales analytics,
-      and business dashboards. I work with SQL, Python, Power BI, DAX, and Excel to turn raw data
-      into clear insights for decision-making.
-    </p>
-
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Telecom Customer Churn Analysis</h3>
-      <div>
-        <span class="pill">SQL</span>
-        <span class="pill">Python</span>
-        <span class="pill">Chi-square</span>
-        <span class="pill">Power BI</span>
-      </div>
-      <p class="tagline">Analyzed 7K+ telecom customers to understand drivers of churn and revenue loss.</p>
-      <ul>
-        <li>Overall churn rate: 27%, with highest churn (62%) in 0–1 month tenure segment.</li>
-        <li>Senior citizens (60+) churn rate: 35% vs 22% for under-30 segment.</li>
-        <li>Lost revenue from churned customers: $8M (26% of total $31M revenue).</li>
-        <li>Fiber Optic and month-to-month contracts are the riskiest segments.</li>
-      </ul>
-      <div class="links">
-        <a href="YOUR_TELECOM_GITHUB_LINK" target="_blank">View on GitHub</a>
-        <a href="YOUR_TELECOM_DASHBOARD_IMAGE_OR_PBIX_LINK" target="_blank">View Dashboard</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <h3>HR / Employee Attrition Analysis</h3>
-      <div>
-        <span class="pill">SQL</span>
-        <span class="pill">Python</span>
-        <span class="pill">Power BI</span>
-      </div>
-      <p class="tagline">Explored employee attrition patterns to identify high-risk groups and root causes.</p>
-      <ul>
-        <li>51% overall attrition, with very high exits in the first year of employment.</li>
-        <li>Higher churn among older employees (46+) and even among high performers.</li>
-        <li>Production department and frontline roles like Laborer/Technician show the most exits.</li>
-      </ul>
-      <div class="links">
-        <a href="YOUR_HR_GITHUB_LINK" target="_blank">View on GitHub</a>
-        <a href="YOUR_HR_DASHBOARD_IMAGE_OR_PBIX_LINK" target="_blank">View Dashboard</a>
+    <!-- About + Skills -->
+    <div class="card">
+      <div class="two-column">
+        <div>
+          <h3 class="section-title">About Me</h3>
+          <p class="tagline">
+            I’m a fresher data analyst building hands-on projects in churn analysis, HR analytics,
+            and sales performance. I focus on writing clear SQL, performing analysis in Python,
+            and building interactive Power BI dashboards that highlight real business insights.
+          </p>
+          <p class="tagline">
+            My goal is to work in a Data Analyst / BI Analyst role where I can help companies
+            understand their customers, performance, and patterns through data.
+          </p>
+        </div>
+        <div>
+          <h3 class="section-title">Skills</h3>
+          <div class="skills-list">
+            <span>SQL (joins, aggregations, CASE, cleaning)</span>
+            <span>Python (Pandas, EDA, chi-square)</span>
+            <span>Power BI (DAX, Power Query, dashboards)</span>
+            <span>DAX (measures, KPIs, measure selector)</span>
+            <span>Excel (pivot tables, formulas)</span>
+            <span>Churn Analysis</span>
+            <span>Sales & Profit Analysis</span>
+            <span>Data Cleaning & EDA</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="project">
-      <h3>Sales Performance Dashboard</h3>
-      <div>
-        <span class="pill">Power Query</span>
-        <span class="pill">SQL</span>
-        <span class="pill">DAX</span>
-        <span class="pill">Power BI</span>
+    <!-- Projects -->
+    <div class="card" id="projects">
+      <h3 class="section-title">Projects</h3>
+
+      <!-- Telecom Churn -->
+      <div class="project">
+        <h4>Telecom Customer Churn Analysis</h4>
+        <div class="project-tools">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Chi-square Test</span>
+          <span class="pill">Power BI</span>
+        </div>
+        <p class="tagline">
+          Analyzed ~7K telecom customers to understand why customers are leaving, which segments are most at risk,
+          and how churn impacts revenue.
+        </p>
+        <ul>
+          <li>Overall churn rate: <b>27%</b> (~1 in 4 customers), making churn a critical business issue.</li>
+          <li>Customers with <b>0–1 month tenure</b> have the highest churn rate at <b>62%</b>,
+              indicating serious onboarding and early-experience problems.</li>
+          <li><b>Senior citizens (60+)</b> churn at <b>35%</b> vs <b>22%</b> for customers under 30.</li>
+          <li>Lost revenue due to churn is <b>$8M</b>, about <b>26%</b> of total revenue (~$31M).</li>
+          <li>Fiber Optic and <b>month-to-month contracts (46% churn)</b> are the riskiest segments,
+              while longer contracts (1-year at 11%, 2-year at 3%) are much more stable.</li>
+          <li>Used <b>chi-square tests</b> to check association between churn and variables like
+              Internet Type, Tenure Bucket, Contract, Streaming services, and Payment Method.</li>
+        </ul>
+        <div class="links">
+          <a href="YOUR_TELECOM_GITHUB_LINK" target="_blank">View Project on GitHub</a>
+          <a href="YOUR_TELECOM_PBIX_OR_IMAGE_LINK" target="_blank">View Power BI Dashboard</a>
+        </div>
       </div>
-      <p class="tagline">Built an end-to-end sales performance dashboard with dynamic measures and trends.</p>
-      <ul>
-        <li>Total sales: $34M, total profit: $21M (60.29% margin), total cost: $14M.</li>
-        <li>New Zealand and Bars category are top drivers of sales and profit.</li>
-        <li>Peanut Butter Cubes product has a 66.71% profit margin.</li>
-        <li>Used a DAX-based measure selector to switch between monthly Sales, Boxes, Shipments, Profit, and Cost.</li>
-      </ul>
-      <div class="links">
-        <a href="YOUR_SALES_GITHUB_LINK" target="_blank">View on GitHub</a>
-        <a href="YOUR_SALES_DASHBOARD_IMAGE_OR_PBIX_LINK" target="_blank">View Dashboard</a>
+
+      <!-- HR / Employee Attrition -->
+      <div class="project">
+        <h4>HR / Employee Attrition Analysis</h4>
+        <div class="project-tools">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Power BI</span>
+        </div>
+        <p class="tagline">
+          Explored employee data to understand attrition patterns, identify high-risk groups, and highlight
+          departments and roles with the most exits.
+        </p>
+        <ul>
+          <li>Overall attrition rate around <b>50%+</b>, meaning over half of employees have left the company.</li>
+          <li>Highest attrition in the <b>first year</b>, then gradually dropping by year 5,
+              indicating onboarding and early engagement issues.</li>
+          <li>Older employees (46+) and even <b>high performers</b> show higher attrition, signalling
+              problems with career progression and retention strategy.</li>
+          <li>The <b>Production</b> department and roles like Laborer, Technician, Engineer, and Foreman
+              show the highest attrition, pointing to workload and frontline pressure.</li>
+          <li>Built a Power BI dashboard to track attrition by tenure, age band, department, work-life balance,
+              gender, and job role.</li>
+        </ul>
+        <div class="links">
+          <a href="YOUR_HR_GITHUB_LINK" target="_blank">View Project on GitHub</a>
+          <a href="YOUR_HR_PBIX_OR_IMAGE_LINK" target="_blank">View Power BI Dashboard</a>
+        </div>
+      </div>
+
+      <!-- Sales Performance Dashboard -->
+      <div class="project">
+        <h4>Sales Performance Dashboard</h4>
+        <div class="project-tools">
+          <span class="pill">Power Query</span>
+          <span class="pill">SQL</span>
+          <span class="pill">DAX</span>
+          <span class="pill">Power BI</span>
+        </div>
+        <p class="tagline">
+          Built an end-to-end sales performance dashboard with dynamic measures to analyze sales, profit,
+          cost, shipments and boxes across regions, categories, products, and months.
+        </p>
+        <ul>
+          <li>Total sales: <b>$34M</b>, total profit: <b>$21M</b> (profit margin <b>60.29%</b>),
+              total cost: <b>$14M</b>, total shipments: <b>6k</b>, total boxes: <b>2M</b>.</li>
+          <li><b>New Zealand</b> is the top region with <b>$6M</b> in sales and <b>$4M</b> in profit.</li>
+          <li><b>Bars</b> is the highest-performing category with <b>$17M</b> in sales and <b>$10M</b> in profit.</li>
+          <li>Top salesperson <b>Marney O’Breen</b> generated <b>$17M</b> sales and <b>$10M</b> profit.</li>
+          <li><b>Peanut Butter Cubes</b> has the highest product-level profitability with a
+              <b>66.71% profit margin</b>.</li>
+          <li><b>December</b> shows the highest sales, profit, and shipments; <b>October</b> has the highest boxes,
+              while <b>January</b> has the highest costs.</li>
+          <li>Used a <b>DAX-based Measure Selector</b> to dynamically switch a monthly trend chart
+              between Sales, Boxes, Shipments, Profit, and Total Cost.</li>
+        </ul>
+        <div class="links">
+          <a href="YOUR_SALES_GITHUB_LINK" target="_blank">View Project on GitHub</a>
+          <a href="YOUR_SALES_PBIX_OR_IMAGE_LINK" target="_blank">View Power BI Dashboard</a>
+        </div>
       </div>
     </div>
 
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>SQL (joins, aggregates, window functions)</span>
-      <span>Python (Pandas, analysis, chi-square)</span>
-      <span>Power BI (DAX, Power Query, dashboards)</span>
-      <span>Excel (pivot tables, formulas)</span>
-      <span>Data Cleaning & EDA</span>
-      <span>Business Reporting</span>
+    <!-- Contact -->
+    <div class="card" id="contact">
+      <h3 class="section-title">Contact</h3>
+      <p class="tagline">
+        I’m open to opportunities as a Data Analyst / BI Analyst.  
+        Feel free to reach out if you’d like to discuss my projects or potential roles.
+      </p>
+      <p class="tagline">
+        <b>Email:</b> YOUR_EMAIL_HERE<br />
+        <b>LinkedIn:</b> <a href="YOUR_LINKEDIN_LINK" target="_blank">View Profile</a><br />
+        <b>GitHub:</b> <a href="YOUR_GITHUB_PROFILE_LINK" target="_blank">View Repositories</a>
+      </p>
     </div>
-
-    <h2>Contact</h2>
-    <p>
-      Email: <b>YOUR_EMAIL_HERE</b><br />
-      LinkedIn: <a href="YOUR_LINKEDIN_LINK" target="_blank">View Profile</a><br />
-      GitHub: <a href="YOUR_GITHUB_PROFILE_LINK" target="_blank">View Repositories</a>
-    </p>
   </div>
 
   <footer>
